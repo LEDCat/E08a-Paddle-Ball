@@ -8,14 +8,20 @@
 
 [node name="Paddle" type="KinematicBody2D" parent="."]
 position = Vector2( 510.75, 582.75 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="Paddle"]
 texture = ExtResource( 1 )
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
+[node name="Ball" type="RigidBody2D" parent="."]
 position = Vector2( 510.75, 582.75 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Sprite" type="Sprite" parent="RigidBody2D"]
+[node name="Sprite" type="Sprite" parent="Ball"]
 position = Vector2( -1, -65 )
 texture = ExtResource( 2 )
 
@@ -24,6 +30,7 @@ position = Vector2( 508.75, 544.75 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall"]
 scale = Vector2( 1.0244, 0.982952 )
+polygon = PoolVector2Array( -496.632, 96.902, -399.014, 96.902, -399.014, 96.902, -399.014, -472.81, 401.454, -472.81, 401.454, 96.902, 499.073, 96.902, 499.073, -554.198, -496.632, -554.198 )
 
 [node name="tile_blue" type="Sprite" parent="Wall/CollisionPolygon2D"]
 position = Vector2( -165.537, -293.438 )
