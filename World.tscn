@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/paddle.png" type="Texture" id=1]
 [ext_resource path="res://Assets/ball.png" type="Texture" id=2]
-[ext_resource path="res://Assets/tile_blue.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 49.25, 10 )
@@ -54,7 +53,3 @@ position = Vector2( 508.75, 529 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall"]
 scale = Vector2( 1.0244, 0.982952 )
 polygon = PoolVector2Array( -496.632, 96.902, -399.014, 96.902, -399.014, 96.902, -399.014, -472.81, 401.454, -472.81, 401.454, 96.902, 499.073, 96.902, 499.073, -554.198, -496.632, -554.198 )
-
-[node name="tile_blue" type="Sprite" parent="Wall/CollisionPolygon2D"]
-position = Vector2( -165.537, -293.438 )
-texture = ExtResource( 3 )
