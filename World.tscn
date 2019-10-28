@@ -6,17 +6,17 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 49.25, 10 )
 
-[sub_resource type="PhysicsMaterial" id=3]
+[sub_resource type="PhysicsMaterial" id=2]
 friction = 0.0
 bounce = 1.0
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=3]
 radius = 12.772
 
 [node name="World" type="Node"]
 
 [node name="Paddle" type="KinematicBody2D" parent="."]
-position = Vector2( 510.75, 582.75 )
+position = Vector2( 412, 508 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -28,9 +28,9 @@ texture = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="Ball" type="RigidBody2D" parent="."]
-position = Vector2( 508.75, 544.75 )
+position = Vector2( 410, 470 )
 mode = 2
-physics_material_override = SubResource( 3 )
+physics_material_override = SubResource( 2 )
 gravity_scale = 0.0
 linear_velocity = Vector2( 200, -200 )
 linear_damp = 0.0
@@ -45,11 +45,12 @@ texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
 position = Vector2( 1.25, -4.75 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="Wall" type="Area2D" parent="."]
-position = Vector2( 508.75, 529 )
+position = Vector2( 412, 470 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall"]
-scale = Vector2( 1.0244, 0.982952 )
+position = Vector2( 60.2824, 0 )
+scale = Vector2( 1.10019, 0.982952 )
 polygon = PoolVector2Array( -496.632, 96.902, -399.014, 96.902, -399.014, 96.902, -399.014, -472.81, 401.454, -472.81, 401.454, 96.902, 499.073, 96.902, 499.073, -554.198, -496.632, -554.198 )
