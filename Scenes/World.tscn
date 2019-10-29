@@ -16,7 +16,7 @@ radius = 12.772
 [node name="World" type="Node"]
 
 [node name="Paddle" type="KinematicBody2D" parent="."]
-position = Vector2( 412, 508 )
+position = Vector2( 512, 520 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -28,7 +28,7 @@ texture = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="Ball" type="RigidBody2D" parent="."]
-position = Vector2( 410, 470 )
+position = Vector2( 512, 470 )
 mode = 2
 physics_material_override = SubResource( 2 )
 gravity_scale = 0.0
@@ -47,10 +47,11 @@ texture = ExtResource( 2 )
 position = Vector2( 1.25, -4.75 )
 shape = SubResource( 3 )
 
-[node name="Wall" type="Area2D" parent="."]
-position = Vector2( 412, 470 )
+[node name="Tiles" type="Node" parent="."]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall"]
-position = Vector2( 60.2824, 0 )
-scale = Vector2( 1.10019, 0.982952 )
-polygon = PoolVector2Array( -496.632, 96.902, -399.014, 96.902, -399.014, 96.902, -399.014, -472.81, 401.454, -472.81, 401.454, 96.902, 499.073, 96.902, 499.073, -554.198, -496.632, -554.198 )
+[node name="Gray Tiles" type="Node2D" parent="Tiles"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 0, 640, 0, 0, 1024, 0, 1024, 640, 1120, 640, 1120, -64, -96, -64, -96, 640 )
